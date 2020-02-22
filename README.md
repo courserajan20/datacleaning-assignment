@@ -30,6 +30,8 @@ This repository holds all the files to submit the assignment.
   - From this tidy dataset an independed second table will be created which will contain average of each variable for each activty. This kind of like a summery table. This table will be written to a file `second_tidy_data.txt`.
   - All the unused variables and dataframes are deleted to free the RAM.
   
+  ### Note:
+  To know more about the variables of the dataset, take a look at `Codebook.md`.
   
   ### Source Citation
   The original data is take from UCI Machine Learning Repository to perform this assignment. Checkout [UCI's Page](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) for more information.

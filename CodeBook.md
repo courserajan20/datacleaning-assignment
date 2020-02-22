@@ -1,12 +1,12 @@
 # Codebook of Tidy data Assignment 
-### Course: "Getting and Clearing Data" Week4 - Programming Assignment
+### Coursera: "Getting and Clearing Data" Programming Assignment
 
 
 
 ## Index
 - `README.md` ~ For more general info on this repo.
 - `tidy_data.txt` & `second_tidy_data.txt` ~ The datasets this codebook is explaining.
-- [`run_analysis.R`](https://github.com/master/run_analysis.R) ~ The R script used to process the dataset.
+- [`run_analysis.R`](https://github.com/courserajan20/datacleaning-assignment/blob/master/run_analysis.R) ~ The R script used to process the dataset.
 - The Source Datafile used for this project [UCI HAR Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 - [Data](#data) ~ Structure of the dataset.
 - [Variables](#variables) ~ Variables found in the dataset.
@@ -38,7 +38,7 @@ Each row contains value for subject, activity_code, activity and 79 other measur
     - `LAYING`: subject was laying
 
 
-Now comes the variables from `features.txt`. Only the *average*  and *standard deviation* measurement variables from the file are taken into consideration. The measurements are classified into two domains `Time Domain` and `Frequency Domain` signals.
+Now comes the variables from `features.txt`. Only the *average*  and *standard deviation* measurement variables from the file are taken into consideration. The measurements are classified into two domains `Time Domain` and `Frequency Domain`. The X,Y,Z at the end of the variable named idicate that the measurements in three axis plane (XYZ).
 
 ### Time-domain data.
 
@@ -138,14 +138,14 @@ Now comes the variables from `features.txt`. Only the *average*  and *standard d
 
 ### NameChanges <a name='name-changes'></a>
 Some variable names of the datasets are changed to better verbose form, which was initially in short form. For example `tBodyGyro-mean()-X` changed to `TimeDomain.BodyGyroscopeMean-X`. Simillarly the parts changed are listed below
-`^t` to TimeDomain.
-`std` to StandardDeviation
-`mean` to Mean
-`Acc` to Accelerometer
-'Gyro` to Gyroscope
-`Mag` to Magnitude
-`Freq()` to Frequency
-`^f` to FrequencyDomain
+ - `^t` to TimeDomain.
+ - `std` to StandardDeviation
+ - `mean` to Mean
+ - `Acc` to Accelerometer
+ - `Gyro` to Gyroscope
+ - `Mag` to Magnitude
+ - `Freq()` to Frequency
+ - `^f` to FrequencyDomain
 Some special characters such as `(`, `)`, `[`, `]`, `\\`, `\` are removed from the variable names.
 
 
@@ -159,4 +159,3 @@ The following steps are performed to tidy up the data. The following are accordi
 - Step:4 The variable names were changed to a more readable format as described in the [NameChaneges](#name-changes) section. Save this dataset to `tidy_data.txt` file.
 - Step:5 Lastly, from the dataset remaining after Step:4 data set a final dataset was created with the average of each variable for each activity and each subject. This is stored in the file `second_tidy_data.txt`.
 
-*Note*: The R script used to tidy up the data can be found in [run_analysis.R](https://github.com/master/run_analysis.R)
